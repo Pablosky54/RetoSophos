@@ -12,6 +12,6 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
         glue="com.google.www.stepdefinitions",
         snippets= SnippetType.CAMELCASE,
         monochrome = true)
-public class servicerRest {
+public class serviceRest {
 
 }

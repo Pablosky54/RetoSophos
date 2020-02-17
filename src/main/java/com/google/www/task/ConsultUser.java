@@ -1,11 +1,12 @@
 package com.google.www.task;
 
+import static com.google.www.models.Rest.AUTHORIZATION;
+import static com.google.www.models.Rest.BASE;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 import com.google.www.models.Rest;
 import com.google.www.util.Consult;
 
-import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.rest.interactions.Get;
@@ -30,7 +31,8 @@ public class ConsultUser implements Task{
 	@Override
 	public <T extends Actor> void performAs(T actor) {
 		userConsult = Consult.newInstance().generateActualSql(user, name,lastName);
-		actor.attemptsTo(Get.resource(Rest.BASE+userConsult)
+		System.out.println("metodo GET ->"+Rest.BASE.toString()+"/public-api/users"+AUTHORIZATION.toString());
+		actor.attemptsTo(Get.resource(BASE.toString()+"/public-api/users"+AUTHORIZATION.toString())
 		        );
 		
 	}

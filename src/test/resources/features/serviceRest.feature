@@ -5,7 +5,6 @@ Feature: Petition REST
   I want to consult user for petition REST
   
 
-  Scenario: Submit a REST request and validate the data
-    
+  Scenario: Submit a REST request and validate the data    
     When "JuanPablo" send petition
     Then I valid that the user exists Nelda Ferry
