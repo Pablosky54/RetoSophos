@@ -2,11 +2,9 @@ package com.google.www.questions;
 
 import static com.google.www.ui.SearchProduct.VALID_BOTTON;
 
-import com.google.www.models.Product;
-import com.google.www.ui.SearchProduct;
-
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
+import net.serenitybdd.screenplay.questions.Text;
 
 public class ValidateAddCar implements Question<Boolean> {
 	
@@ -16,7 +14,7 @@ public class ValidateAddCar implements Question<Boolean> {
 	@Override
     public Boolean answeredBy(Actor actor) {
     	
-        return VALID_BOTTON.of(Product.PRODUCT.toString()).resolveFor(actor).isVisible();
+        return Text.of(VALID_BOTTON).viewedBy(actor).asString().equals("en el carrito");
     }
 
     public static ValidateAddCar is(){

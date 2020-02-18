@@ -12,8 +12,8 @@ public class SearchProduct extends PageObject{
 	public static final Target PRODUCT = Target.the("Product in car")
             .located(By.xpath("//div[@class='product-item__info']//a[@title='{0}']"));	
 	
-	public static final Target VALID_BOTTON = Target.the("Boton in product")
-            .located(By.xpath("//div//a[contains(text(), '{0}')]"));
+	public static final Target VALID_BOTTON = Target.the("Boton  confirm product")
+            .located(By.xpath("//div//span[contains(text(),'en el carrito')]"));
 	
 	public static final Target CAR_BOTTON = Target.the("Botton to car")
             .located(By.xpath("//div//button[@data-minicart]"));
