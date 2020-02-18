@@ -1,6 +1,6 @@
 Reto de automatización Sophos
 Introducción
-\nCaso #1 - Automatización web enfocada en la busqueda de un producto en la página web metro, posteriormente agregarla al carro de compras y validar que se añade exitosamente el producto.
+Caso #1 - Automatización web enfocada en la busqueda de un producto en la página web metro, posteriormente agregarla al carro de compras y validar que se añade exitosamente el producto.
 
 Caso #2- Automatización encargada de ejecutar y validar un servicio Rest, para este caso se realizo la consulta del nombre y apellido de un usuario y se valida que exista con los datos proporcionados desde el feature.
 
