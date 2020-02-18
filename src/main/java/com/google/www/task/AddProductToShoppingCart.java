@@ -1,15 +1,21 @@
 package com.google.www.task;
 
+import static com.google.www.exceptions.AddProductException.ELEMENT_NO_VISIBLE_FAILED_MESSAGE;
+import static net.serenitybdd.screenplay.Tasks.instrumented;
+
+import org.openqa.selenium.ElementNotVisibleException;
+import org.openqa.selenium.Keys;
+
 import com.google.www.exceptions.AddProductException;
+import com.google.www.ui.HomeMetro;
+import com.google.www.ui.SearchProduct;
+
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.actions.Hit;
 import net.thucydides.core.annotations.Step;
-import org.openqa.selenium.ElementNotVisibleException;
-
-import static com.google.www.exceptions.AddProductException.ELEMENT_NO_VISIBLE_FAILED_MESSAGE;
-import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class AddProductToShoppingCart implements Task {
 
@@ -30,9 +36,11 @@ public class AddProductToShoppingCart implements Task {
     @Step("{0} add a product to shopping cart on linio website")
     public <T extends Actor> void performAs(T actor) {
         try {
-           /* actor.attemptsTo(Click.on(SEARCH_FIELD),
-                    Enter.theValue(nameProduct).into(SEARCH_FIELD),
-                    Click.on(SEARCH_BUTTON),
+            actor.attemptsTo(Enter.theValue(nameProduct+"\n").into(HomeMetro.SEARCH_BOX),
+            		Click.on(SearchProduct.ADD_BUY_CAR));
+            //actor.should(Hit.the(Keys.ENTER));
+                    
+            /*Click.on(SEARCH_BUTTON),
                     Click.on(PRODUCT_NINTENDO_SWITCH),
                     Click.on(ADD_TO_CART_BUTTON),
                     Click.on(GO_TO_CART_BUTTON));*/

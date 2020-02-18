@@ -1,0 +1,3 @@
+[0217/194808.757:ERROR:crash_report_database_win.cc(558)] GetFileAttributes C:\Users\JUANPA~1.GAL\AppData\Local\Temp\scoped_dir28520_2377\Crashpad: The system cannot find the file specified. (0x2)
+[0217/201354.983:ERROR:crash_report_database_win.cc(558)] GetFileAttributes C:\Users\JUANPA~1.GAL\AppData\Local\Temp\scoped_dir23024_26685\Crashpad: The system cannot find the file specified. (0x2)
+[0217/201927.480:ERROR:crash_report_database_win.cc(558)] GetFileAttributes C:\Users\JUANPA~1.GAL\AppData\Local\Temp\scoped_dir19312_6363\Crashpad: The system cannot find the file specified. (0x2)

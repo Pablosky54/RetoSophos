@@ -13,6 +13,6 @@ import cucumber.api.SnippetType;
         snippets= SnippetType.CAMELCASE,
         monochrome = true)
 
-public class buyProduct {
+public class BuyProduct {
 
 }

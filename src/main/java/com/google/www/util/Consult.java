@@ -6,7 +6,7 @@ public class Consult {
         return new Consult();
     }
 	
-	public String generateActualSql(String consult, String... parameters) {
+	public String generateConsult(String consult, String... parameters) {
         String[] parts = consult.split("\\*");
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < parts.length; i++) {

@@ -7,6 +7,8 @@ import static net.serenitybdd.screenplay.rest.questions.ResponseConsequence.seeT
 
 import com.google.www.models.Rest;
 import com.google.www.task.ConsultUser;
+import com.ibm.icu.impl.number.Parse;
+
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -14,7 +16,7 @@ import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.rest.abiities.CallAnApi;
 
-public class serviceRestStepDefinition {
+public class ServiceRestStepDefinition {
 	
 	@Before
     public void setTheStage() {
@@ -31,14 +33,13 @@ public class serviceRestStepDefinition {
 	}
 
 
-	@Then("^I valid that the user exists (.*) (.*)$")
-	public void iValidThatTheUserExists(String name, String lastName){	
+	@Then("^I valid that the user exists (.*) (.*) and response code is (.*)$")
+	public void iValidThatTheUserExistsAndResponseCodeIs200(String name, String lastName,String code){	
 		
-		
+		//La consulta es dinamica, los datos se actualizan cada determinado tiempo en el servidor
 		theActorInTheSpotlight().attemptsTo(ConsultUser.with(CONSULT.toString(), name, lastName));
-		theActorInTheSpotlight().should(seeThatResponse(response ->System.out.println(response.statusCode(200))));
-		theActorInTheSpotlight().should(seeThatResponse(response -> response.statusCode(200)));
+		theActorInTheSpotlight().should(seeThatResponse(response -> response.statusCode(Integer.parseInt(code))));
 	    
 	}
-
+	
 }

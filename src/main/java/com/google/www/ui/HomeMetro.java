@@ -12,7 +12,8 @@ public class HomeMetro extends PageObject{
         return new HomeMetro();
     }
 	
-	public static final Target SEARCH_BUTTON = Target.the("search button in linio home page")
-            .located(By.xpath("//button[@class='btn btn-primary btn-search']"));
+	public static final Target SEARCH_BOX = Target.the("search box in metro home page")
+            .located(By.xpath("//*[@id=\"search-autocomplete-input\"]"));
+	
 
 }

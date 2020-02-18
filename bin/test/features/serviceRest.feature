@@ -7,4 +7,4 @@ Feature: Petition REST
 
   Scenario: Submit a REST request and validate the data    
     When "JuanPablo" send petition
-    Then I valid that the user exists Nelda Ferry
+    Then I valid that the user exists Chad O'Reilly and response code is 200
