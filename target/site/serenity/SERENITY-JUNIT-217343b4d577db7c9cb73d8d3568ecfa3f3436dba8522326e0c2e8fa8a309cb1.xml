@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="I as a user of cybermetro" skipped="0" tests="1" time="40.95" timestamp="2020-02-17 08:18:45"><testcase name="Add a product to the shopping cart and validate that it is added correctly"><error type="java.lang.IllegalMonitorStateException"/><system-err>null&#13;
-com.google.www.task.AddProductToShoppingCart.performAs(AddProductToShoppingCart.java:40)&#13;
-com.google.www.stepdefinitions.BuyProductStepDefinition.iAddAProductToTheShoppingCart(BuyProductStepDefinition.java:39)&#13;
-cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
-org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)&#13;
-org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)&#13;
-org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)&#13;
-org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)&#13;
-org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)&#13;
-org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)&#13;
-</system-err></testcase></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="I as a user of cybermetro" skipped="0" tests="1" time="49.57" timestamp="2020-02-18 11:12:17"><testcase name="Add a product to the shopping cart and validate that it is added correctly"/></testsuite>

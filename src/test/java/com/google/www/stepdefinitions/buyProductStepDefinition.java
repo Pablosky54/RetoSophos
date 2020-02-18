@@ -43,7 +43,7 @@ public class BuyProductStepDefinition {
 	@Then("^I should see that the product was added successfully$")
 	public void iShouldSeeThatTheProductWasAddedSuccessfully(){
 		
-		theActorInTheSpotlight().should(seeThat(ValidateAddCar.is(SearchProduct.VALID_BOTTON)));
+		theActorInTheSpotlight().should(seeThat(ValidateAddCar.is()));
 	    
 	}
 }
